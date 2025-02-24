@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromptGenius</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1>PromptGenius</h1>
+      <button id="darkModeToggle">🌙</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Unleash Your Creativity with AI-Powered Writing Prompts!</h2>
+      <button id="generatePromptBtn">Generate Prompt Now</button>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Form for Customizing Prompts -->
+    <form id="promptForm">
+      <label for="genre">Genre:</label>
+      <select id="genre" name="genre">
+        <option value="fiction">Fiction</option>
+        <option value="poetry">Poetry</option>
+        <option value="horror">Horror</option>
+        <option value="romance">Romance</option>
+        <option value="sci-fi">Science Fiction</option>
+      </select>
+
+      <label for="tone">Tone:</label>
+      <select id="tone" name="tone">
+        <option value="serious">Serious</option>
+        <option value="humorous">Humorous</option>
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+      </select>
+
+      <label for="wordCount">Word Count:</label>
+      <input type="range" id="wordCount" name="wordCount" min="100" max="1000" value="500">
+      <span id="wordCountValue">500</span>
+
+      <button type="button" id="submitFormBtn">Get My Prompt</button>
+    </form>
+
+    <!-- Display Generated Prompt -->
+    <div id="promptDisplay" class="hidden">
+      <h3>Your Writing Prompt:</h3>
+      <p id="generatedPrompt"></p>
+      <button id="savePromptBtn">Save Prompt</button>
+    </div>
+
+    <!-- Saved Prompts List -->
+    <div id="savedPromptsSection" class="hidden">
+      <h3>Saved Prompts:</h3>
+      <ul id="savedPromptsList"></ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 PromptGenius. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
